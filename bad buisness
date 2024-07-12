@@ -115,8 +115,8 @@ do --// UI Elements
             end
         })
         
-        Sections.AimbotSection:AddToggle('VisualiseRange', {
-            Text = 'Visualise Range',
+        Sections.AimbotSection:AddToggle('fov circle', {
+            Text = 'fov circle',
             Default = false,
             Tooltip = ' ',
         
@@ -161,7 +161,7 @@ do --// UI Elements
 
         Sections.AimbotSection:AddDivider()
 
-        Sections.AimbotSection:AddToggle('VisualiseRange', {
+        Sections.AimbotSection:AddToggle('fov circle', {
             Text = 'Account Distance',
             Default = false,
             Tooltip = ' ',
@@ -593,7 +593,7 @@ do --// UI
     local MenuGroup = Tabs['UI Settings']:AddLeftGroupbox('Menu')
     
     MenuGroup:AddButton('Unload', function() Library:Unload() end)
-    MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { Default = 'End', NoUI = true, Text = 'Menu keybind' })
+    MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { Default = 'end', NoUI = true, Text = 'Menu keybind' })
     
     ThemeManager:SetLibrary(Library)
     SaveManager:SetLibrary(Library)
